@@ -11,7 +11,7 @@
     border-color: green;
 }
 
-#vitrine div, #segmento div, #carrinho div {
+#vitrine div, #segmento div, #produto {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,5 +67,7 @@
 #total {
     border-style: solid;
     border-color: green;
+    margin: 1rem;
+    padding: 1rem;
     height: 1rem;
 }
