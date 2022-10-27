@@ -122,7 +122,7 @@ function homeClick() {
     if (divVitrine.hasAttribute("style")) {
         divVitrine.removeAttribute("style")
         let childrenToShow = document.querySelectorAll("#vitrine > *")
-        for (let i = 0; i < childrenToHide.length; i++) {
+        for (let i = 0; i < childrenToShow.length; i++) {
             childrenToShow[i].removeAttribute("style")
         }
     }
