@@ -1,0 +1,65 @@
+.grid-container {
+    display: grid;
+    justify-content: center;
+    width: 100vw;
+}
+
+#vitrine {
+    display: flex;
+    flex-wrap: wrap;
+    border-style: dashed;
+    border-color: green;
+}
+
+#vitrine div, #segmento div, #carrinho div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-style: solid;
+    border-color: blueviolet;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+#segmento {
+    display: flex;
+    flex-wrap: wrap;
+    border-style: dashed;
+    border-color: brown;
+}
+
+#menu {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+#menu button{
+    margin-right: 0.5rem;
+
+}
+
+#carrinhoButton {
+    display: flex;
+    align-items: baseline;
+    margin-left: auto;
+}
+
+#carrinhoButton p {
+    margin-left: 0.3rem;
+}
+
+#produto {
+    width: 6rem;
+}
+
+#produto button{
+    margin: 0.5rem;
+}
+
+#carrinho {
+    display: flex;
+    flex-wrap: wrap;
+    border-style: dashed;
+    border-color: blue;
+}
