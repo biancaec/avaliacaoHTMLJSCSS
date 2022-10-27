@@ -70,7 +70,7 @@ function segmentoClick(id) {
         }
     }
     let divCarrinho = document.getElementById("carrinho")
-    
+
     if (!divCarrinho.hasAttribute("style")) {
         divCarrinho.style.display = "none"
         let childrenToHide = document.querySelectorAll("#carrinho > *")
@@ -110,7 +110,7 @@ function homeClick() {
         }
     }
     let divCarrinho = document.getElementById("carrinho")
-    
+
     if (!divCarrinho.hasAttribute("style")) {
         divCarrinho.style.display = "none"
         let childrenToHide = document.querySelectorAll("#carrinho > *")
@@ -168,8 +168,8 @@ function excluirClick(index) {
     for (let i = 0; i < carrinho.length; i++) {
         if (index == carrinho[i].id) {
             carrinho[i].quantidade -= 1
-            if(carrinho[i].quantidade == 0) {
-                carrinho.splice(i,1)
+            if (carrinho[i].quantidade == 0) {
+                carrinho.splice(i, 1)
             }
             break
         }
@@ -227,17 +227,25 @@ function carrinhoClick() {
             bExcluir.innerHTML = "Excluir"
             bExcluir.setAttribute("id", `${carrinho[i].id}`)
             bExcluir.setAttribute("onclick", "excluirClick(this.id)")
-            
-            
 
             divProduto.append(pNome)
             divProduto.append(pQuantidade)
             divProduto.append(bComprar)
             divProduto.append(bExcluir)
             divCarrinho.append(divProduto)
-
+           
 
         }
+        let divTotal = document.createElement("div")
+        divTotal.setAttribute("id", "total")
+        divTotal.innerHTML = `Total: R$ ${calcularTotal().toFixed(2)}`
+        divCarrinho.append(divTotal)
     }
+}
+
+function calcularTotal() {
+    let total = carrinho.reduce((total, item) => total + item.quantidade * produtos[item.id].preco, 0)
+
+    return total
 }
 

@@ -63,3 +63,9 @@
     border-style: dashed;
     border-color: blue;
 }
+
+#total {
+    border-style: solid;
+    border-color: green;
+    height: 1rem;
+}
